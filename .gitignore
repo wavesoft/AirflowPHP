@@ -1,0 +1,4 @@
+config/db.sqlite3
+airflow/vendor/*
+
+airflow/theme/default/static/css/default.css

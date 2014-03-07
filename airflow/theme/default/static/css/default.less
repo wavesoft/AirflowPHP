@@ -1,0 +1,240 @@
+
+.c1 { background-color: #99CCFF; }
+.c2 { background-color: #CC99FF; }
+.c3 { background-color: #FF9999; }
+.c4 { background-color: #FFCC66; }
+.c5 { background-color: #CCCC00; }
+.c6 { background-color: #33CCCC; }
+.c7 { background-color: #99CC00; }
+.c8 { background-color: #FF5050; }
+.c9 { background-color: #9900FF; }
+
+///////////////////////////
+// Spinner animation
+///////////////////////////
+
+@-moz-keyframes spinnerAni {
+   from { -moz-transform: rotate(0deg); }
+   to { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spinnerAni {
+   from { -webkit-transform: rotate(0deg); }
+   to { -webkit-transform: rotate(359deg); }
+} 
+@-o-keyframes spinnerAni {
+   from { -o-transform: rotate(0deg); }
+   to { -o-transform: rotate(359deg); }
+} 
+@keyframes spinnerAni {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(359deg); }
+}
+
+///////////////////////////
+// WebFont imports
+///////////////////////////
+
+@font-face {
+	font-family: 'Open Sans Condensed';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(../fonts/opensans-condensed-700.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Arimo';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Arimo'), url(../fonts/arimo-400.woff) format('woff');
+}
+
+///////////////////////////
+// Core configuration
+///////////////////////////
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Arimo';
+}
+
+h1, h2, h3 ,h4 {
+	font-family: 'Open Sans Condensed';
+	font-weight: 700;
+}
+
+///////////////////////////
+// Site configuration
+///////////////////////////
+
+#f-body {
+
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+
+	.node {
+
+		overflow: hidden;
+		position: relative;
+		padding: 0;
+		margin: 0;
+
+		// The node is fixed on top
+		&.node-topfix-fixed {
+			z-index: 100000;
+			position: fixed;
+			width: 100%;
+			top: 0;
+		}
+
+		// Loading status with CSS-Animated spinner
+		&.loading {
+			&::after {
+
+				position: absolute;
+				left: 50%; top: 50%;
+				width: 60px; height: 60px;
+				margin-left: -30px; margin-top: -30px;
+				
+				content: "";
+				background: no-repeat center center url(../img/spinner.png);
+				opacity: 0.4;
+
+				-moz-animation: spinnerAni 2s linear infinite;
+				-webkit-animation: spinnerAni 2s linear infinite;
+				-o-animation: spinnerAni 2s linear infinite;
+				animation: spinnerAni 2s linear infinite;
+
+			}
+		}
+
+		// =======================
+		//  Vertical Dimentioning
+		// =======================
+
+		// Absolute
+		&.h-sm {
+			height: 64px;
+		}
+		&.h-md {
+			height: 156px;
+		}
+		&.h-lg {
+			height: 600px;
+		}
+
+		// Javascript-calculated
+		&.h-b 	  { } // Horizontal bar
+		&.h-fl 	  { } // Full page cover
+		&.h-fl-b  { } // Full page cover minus the h-bar
+		&.h-hl 	  { } // Half page cover
+		&.h-hl-b  { } // Half page cover minus the h-bar
+
+		// Relative
+		&.h-p1 {
+			height: 100%;
+		}
+		&.h-p2 {
+			height: 50%;
+		}
+		&.h-p3 {
+			height: 33.3%;
+		}
+		&.h-p4 {
+			height: 25%;
+		}
+
+
+		// =======================
+		//  Layers inside the node
+		// =======================
+
+		> .layer {
+
+			// Locating
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%;
+
+			// Backgrounds
+			background-repeat: repeat;
+
+			// -------------------------------------
+			// Vertical positioning inside the layer
+			// -------------------------------------
+
+			// Thirds
+			.y-tr-t {
+				top: 0;
+				height: 33%;
+			}
+			.y-tr-c {
+				top: 33.3%;
+				height: 33%;
+			}
+			.y-tr-b {
+				top: 66.6%;
+				height: 33%;
+			}
+
+			// Halves
+			.y-hv-t {
+				top: 0;
+				height: 50%;
+			}
+			.y-hv-b {
+				top: 50%;
+				height: 50%;
+			}
+
+			// Common
+			.y-cm-title {
+				top: 0px;
+			}
+			.y-cm-subtitle {
+				top: 0px;
+			}
+
+			// -------------------------------------
+			// Horizontal positioning inside the layer
+			// (Only for non-bootstrap styles)
+			// -------------------------------------
+
+
+
+			// -------------------------------------
+			// Background positions
+			// -------------------------------------
+
+			// Parallax layers
+			&.l-parallax {
+
+				&.l-front {
+
+				}
+
+				&.l-back {
+
+				}
+
+			}
+
+			// Body
+			&.l-body {
+				bottom: 0;
+				padding: 10px;
+			}
+
+			// Fixed background
+			&.l-fixed {
+				bottom: 0;
+				background-position: fixed;
+			}
+
+		}
+
+	}
+
+}
