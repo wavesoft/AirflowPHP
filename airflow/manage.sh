@@ -12,7 +12,7 @@ function usage {
 
 function deps_install {
 	echo "Installing dependencies..."
-	php vendor/composer.phar install
+	php composer.phar install
 }
 
 function deps_update {
