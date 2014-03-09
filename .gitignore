@@ -1,4 +1,4 @@
 config/db.sqlite3
-airflow/vendor/*
-airflow/composer.lock
-airflow/theme/default/static/css/default.css
+engine/vendor/*
+engine/composer.lock
+engine/theme/default/static/css/default.css

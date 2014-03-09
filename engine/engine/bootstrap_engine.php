@@ -7,7 +7,7 @@ require_once("db/Node.php");
 require_once("theme.php");
 
 // Install the default theme
-Theme::intall( 
+Theme::install( 
 	"$FLATCMS_ROOT/theme/default", 
 	"flatcms/theme/default",
 	"$SITE_ROOT/cache",

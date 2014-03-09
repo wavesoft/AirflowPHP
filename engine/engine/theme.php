@@ -9,7 +9,7 @@ class Theme {
 	/**
 	 * Install an additional theme to the theme registry
 	 */
-	public static function instsall( $base_dir, $base_url, $cache_dir, $cache_url ) {
+	public static function install( $base_dir, $base_url, $cache_dir, $cache_url ) {
 
 	}
 
