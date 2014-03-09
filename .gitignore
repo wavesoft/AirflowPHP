@@ -2,3 +2,4 @@ config/db.sqlite3
 engine/vendor/*
 engine/composer.lock
 engine/theme/default/static/css/default.css
+*.local
