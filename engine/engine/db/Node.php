@@ -3,7 +3,7 @@
 /**
  * @Entity @Table(name="nodes")
  **/
-class Node {
+class DBNode {
 
     /** @Id @Column(type="integer") @GeneratedValue **/
     protected $id;

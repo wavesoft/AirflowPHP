@@ -9,4 +9,6 @@ define( 'DB_PATH', 		__DIR__.'/db.sqlite3' );
 #define( 'DB_NAME',			'flatcms' );
 #define( 'DB_HOST', 		'localhost' );
 
+define( 'ROOT_URL',		'/flatcms-php' );
+
 ?>

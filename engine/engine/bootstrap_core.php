@@ -12,13 +12,14 @@
 require_once("common/errors.php");
 
 // Site configuration
+define("ENGINE_ROOT", dirname(__DIR__));
+define("SITE_ROOT", dirname( ENGINE_ROOT ));
 $FLATCMS_ROOT = dirname(__DIR__);
-$SITE_ROOT = dirname( $FLATCMS_ROOT );
 
 // Include config
-require_once( "$SITE_ROOT/config/config.php" );
+require_once( SITE_ROOT . "/config/config.php" );
 
 // Include autoloader
-require_once( "$FLATCMS_ROOT/vendor/autoload.php");
+require_once( ENGINE_ROOT . "/vendor/autoload.php");
 
 ?>

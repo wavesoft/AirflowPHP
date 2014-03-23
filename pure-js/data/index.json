@@ -1,0 +1,96 @@
+{
+	"title": "Welcome",
+	"nodes": [
+
+        {
+            "id": "second",
+            "height": 2,
+            "layers": [
+                {
+                    "type": 2,                    
+                    "chunks": [
+                        {
+                            "halign": "left",
+                            "valign": "top",
+                            "body": "Welcome to AirFlow CMS!"
+                        }
+                    ]
+                },
+                {
+                    "type": 1,
+                    "chunks": [
+                        {
+                            "halign": "center",
+                            "valign": "center",
+                            "body": "Fixed block"
+                        }
+                    ]
+                }
+            ]
+        },
+
+		{
+            "id": "first",
+			"height": 2,
+            "layers": [
+                {
+                    "type": 2,
+                    "style": {
+                        "class": "c1"
+                    },
+                    "chunks": [
+                        {
+                            "halign": "left",
+                            "valign": "top",
+                            "body": "<h1>Welcome!</h1><p>Welcome to AirFlow CMS</p>"
+                        }
+                    ]
+                },
+                {
+                    "type": 3,
+                    "chunks": [
+                        {
+                            "halign": "center",
+                            "valign": "center",
+                            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida nunc ipsum, vitae vehicula ligula aliquam pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus id ante id nibh dignissim commodo. Nulla vitae mollis eros. Fusce tincidunt, nibh eget hendrerit vehicula, lorem lacus dictum nunc, a laoreet tortor est vel libero. Quisque ornare ultrices posuere. Maecenas imperdiet erat quis pulvinar auctor. Praesent volutpat, sapien eu luctus sodales, augue nulla rhoncus libero, et pulvinar urna lorem fermentum eros. Nunc nec commodo tellus. Sed euismod luctus quam, eget gravida libero adipiscing eu.</p><p>Nullam in nunc tellus. Suspendisse sed nisl id quam consequat vulputate in eget velit. Donec eleifend, orci quis sodales hendrerit, risus leo pharetra massa, id volutpat risus turpis sit amet sapien. Suspendisse justo nisl, pellentesque ut tincidunt eget, vehicula id libero. Mauris pharetra pellentesque mollis. Ut porttitor, dui fringilla scelerisque blandit, nibh sem dapibus mauris, vitae molestie mi dolor eu metus. Donec nec leo ac libero mollis suscipit. Ut in est velit. Morbi quam arcu, condimentum ut cursus nec, pellentesque sit amet nisl. Etiam euismod ornare orci, vel mollis sapien interdum sed.</p><p>Maecenas non ultricies felis. Nunc in tellus tempus, aliquet eros id, sagittis nulla. Nulla facilisi. Ut ac purus ut mi mollis aliquam sed vel orci. Nullam lacus lectus, varius non massa vel, dapibus interdum arcu. Cras gravida erat et lacus accumsan ultrices. Maecenas porta nisi id elit luctus hendrerit.</p><p>Nam augue nunc, eleifend quis condimentum a, lobortis sed nibh. Curabitur pharetra augue non elit dapibus semper. Aliquam accumsan quam et elit volutpat, id venenatis odio consequat. Praesent sed fermentum elit. Integer sed sodales nulla. Nullam urna diam, pulvinar sit amet posuere in, congue non lectus. In facilisis vehicula felis eget tristique. Mauris dapibus orci eget porta vehicula. Vivamus sit amet mauris turpis. Donec a convallis mi. Sed ut felis sem. Aliquam tempus laoreet quam nec molestie.</p><p>Morbi quam mi, consectetur ac lorem vitae, vehicula adipiscing metus. Nulla tempor a sem sed tempor. Sed interdum nibh vel erat dignissim, sit amet iaculis tortor tempus. Maecenas nunc elit, mattis quis tempus vel, scelerisque vitae risus. Donec fringilla consectetur lectus eu consectetur. Sed eget mattis ante. Aliquam eu mauris tempor, commodo mauris sit amet, fermentum est. Aliquam hendrerit, eros vestibulum eleifend viverra, leo diam egestas justo, eget lobortis orci turpis vel est. Cras iaculis elit id tristique mollis. Nam placerat elementum urna, ut pharetra odio placerat ac. Nulla molestie rutrum augue, sed vehicula turpis vestibulum non. Nulla facilisi. Mauris imperdiet turpis non enim interdum venenatis.</p>"
+                        }
+                    ]
+                },
+                {
+                    "type": 0,
+                    "style": {
+                        "background": "url(img/back-4e.png)"
+                    }
+                }
+            ]
+		},
+
+        {
+            "id": "second",
+            "height": 0,
+            "layers": [
+                {
+                    "type": 2,                    
+                    "chunks": [
+                        {
+                            "halign": "left",
+                            "valign": "top",
+                            "body": "Welcome to AirFlow CMS!"
+                        }
+                    ]
+                },
+                {
+                    "type": 1,
+                    "chunks": [
+                        {
+                            "halign": "center",
+                            "valign": "center",
+                            "body": "Fixed block"
+                        }
+                    ]
+                }
+            ]
+        }
+
+	]
+}
