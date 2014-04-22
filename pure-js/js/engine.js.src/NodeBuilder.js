@@ -64,7 +64,10 @@ F.NodeBuilder.buildLayer = function(data) {
 	if (style['background'] != undefined)
 		layer.css("background", style['background']);
 	if (style['class'] != undefined)
-		layer.addClass("class");
+		layer.addClass(style['class']);
+	$.each(style, function(k,v) {
+		layer.css(k,v);
+	});
 
 	// Process layers
 	if (data['chunks'] != undefined) {
@@ -131,17 +134,13 @@ F.NodeBuilder.buildLayer = function(data) {
 
 			// Process horizontal positioning according
 			// to the responsive layout
-			if (responsive && (cdata['responsive'] != undefined) && cdata['responsive']) {
+			if (responsive && (cdata['responsive'] != undefined) && cdata['responsive'] &&
+					(cdata['col'] != undefined) && (cdata['col'] > 0)) {
 
 				// Check on which responsive column
 				// to drop this chunk
-				switch (cdata['cell'] || 0) {
-					case 0:
-						// Make the chunk to expand horizontally
-						chunk.addClass("x-full");
-						layer.append(chunk);
-						break;
-
+				switch (cdata['col'] || 0) {
+					
 					case 1:
 					case 2:
 					case 4:
@@ -170,7 +169,7 @@ F.NodeBuilder.buildLayer = function(data) {
 				layer.append(chunk);
 
 				// Setup horizontal alignment of the element
-				switch (cdata['cell'] || 0) {
+				switch (cdata['col'] || 0) {
 					case 0:
 						chunk.addClass("x-full");
 						break;
@@ -194,50 +193,50 @@ F.NodeBuilder.buildLayer = function(data) {
 						break;
 				}
 
+				// Setup vertical alignment of the element
+				switch (cdata['row'] || 0) {
+					case 0:
+						chunk.addClass("y-full");
+						break;
+					case 1:
+						chunk.addClass("y-center");
+						break;
+
+					case 2:
+						chunk.addClass("y-hv-1");
+						break;
+					case 3:
+						chunk.addClass("y-hv-2");
+						break;
+
+					case 4:
+						chunk.addClass("y-tr-1");
+						break;
+					case 5:
+						chunk.addClass("y-tr-2");
+						break;
+					case 6:
+						chunk.addClass("y-tr-3");
+						break;
+
+					case 7:
+						chunk.addClass("y-cm-title");
+						break;
+					case 6:
+						chunk.addClass("y-cm-subtitle");
+						break;
+					case 8:
+						chunk.addClass("y-cm-body");
+						break;
+					case 9:
+						chunk.addClass("y-cm-footer");
+						break;
+				}
+
+
+
 			}
 
-			// Setup vertical alignment of the element
-			switch (cdata['row'] || 0) {
-				case 0:
-					chunk.addClass("y-full");
-					break;
-				case 1:
-					chunk.addClass("y-center");
-					break;
-
-				case 2:
-					chunk.addClass("y-hv-1");
-					break;
-				case 3:
-					chunk.addClass("y-hv-2");
-					break;
-
-				case 4:
-					chunk.addClass("y-tr-1");
-					break;
-				case 5:
-					chunk.addClass("y-tr-2");
-					break;
-				case 6:
-					chunk.addClass("y-tr-3");
-					break;
-
-				case 7:
-					chunk.addClass("y-cm-title");
-					break;
-				case 6:
-					chunk.addClass("y-cm-subtitle");
-					break;
-				case 8:
-					chunk.addClass("y-cm-body");
-					break;
-				case 9:
-					chunk.addClass("y-cm-footer");
-					break;
-			}
-
-			// Append the chunk
-			layer.append(chunk);
 		}
 
 	}
@@ -270,12 +269,15 @@ F.NodeBuilder.buildNode = function(data) {
 			h_class = "h-hl-b"
 			break;
 		case 4:
-			h_class = "h-lg"
+			h_class = "h-b"
 			break;
 		case 5:
-			h_class = "h-md"
+			h_class = "h-lg"
 			break;
 		case 6:
+			h_class = "h-md"
+			break;
+		case 7:
 			h_class = "h-sm"
 			break;
 	}

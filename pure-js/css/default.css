@@ -120,7 +120,7 @@ h4 {
   height: 64px;
 }
 #fcms-body .node.h-md {
-  height: 156px;
+  height: 250px;
 }
 #fcms-body .node.h-lg {
   height: 600px;
@@ -206,6 +206,9 @@ h4 {
 #fcms-body .node > .layer .x-hv-2 {
   left: 50%;
   width: 50%;
+}
+#fcms-body .node > .layer.l-parallax {
+  pointer-events: none;
 }
 #fcms-body .node > .layer.l-body {
   bottom: 0;

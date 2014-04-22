@@ -1,10 +1,12 @@
 {
 	"title": "Welcome",
+    "css": [ ],
+    "js": [ ],
 	"nodes": [
 
         {
             "id": "second",
-            "height": 2,
+            "height": 1,
             "layers": [
                 {
                     "type": 2,                    
@@ -29,9 +31,10 @@
             ]
         },
 
-		{
-            "id": "first",
-			"height": 2,
+        {
+            "id": "nav",
+            "height": 4,
+            "fix": true,
             "layers": [
                 {
                     "type": 2,
@@ -40,6 +43,23 @@
                     },
                     "chunks": [
                         {
+                            "body": "Navbar!"
+                        }
+                    ]
+                }
+            ]
+        },
+
+		{
+            "id": "first",
+			"height": 5,
+            "layers": [
+                {
+                    "type": 2,
+                    "chunks": [
+                        {
+                            "col": 1,
+                            "responsive": true,
                             "halign": "left",
                             "valign": "top",
                             "body": "<h1>Welcome!</h1><p>Welcome to AirFlow CMS</p>"
@@ -47,7 +67,10 @@
                     ]
                 },
                 {
-                    "type": 3,
+                    "type": 1,
+                    "style": {
+                        "color": "gold"
+                    },
                     "chunks": [
                         {
                             "halign": "center",
@@ -67,7 +90,7 @@
 
         {
             "id": "second",
-            "height": 0,
+            "height": 6,
             "layers": [
                 {
                     "type": 2,                    
